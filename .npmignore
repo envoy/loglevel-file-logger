@@ -1,0 +1,16 @@
+node_modules/
+*.log
+*.tgz
+*.lock
+
+src/
+test/
+gulpfile.js
+tsconfig.json
+tslint.json
+typings.json
+typings
+dist/test
+
+.vscode/
+

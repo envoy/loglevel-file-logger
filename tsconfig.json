@@ -10,7 +10,7 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "declaration": true,
-    "outDir": "js"
+    "outDir": "./dist"
   },
   "types": ["jest"]
 }
