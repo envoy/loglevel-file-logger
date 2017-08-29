@@ -1,6 +1,6 @@
 {
   "name": "loglevel-file-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "File logger for loglevel",
   "main": "js/index.js",
   "types": "js/index.d.ts",
