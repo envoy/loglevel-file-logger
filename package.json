@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "File logger for loglevel",
   "main": "js/index.js",
-  "typings": "js/index",
+  "types": "js/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,10 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/envoy/loglevel-file-logger.git"
   },
-  "keywords": [
-    "loglevel",
-    "logging"
-  ],
+  "keywords": ["loglevel", "logging"],
   "author": {
     "name": "Fang-Pen Lin",
     "email": "hello@fangpenlin.com",
