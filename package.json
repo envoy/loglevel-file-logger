@@ -11,10 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/envoy/loglevel-file-logger.git"
   },
-  "keywords": [
-    "loglevel",
-    "logging"
-  ],
+  "keywords": ["loglevel", "logging"],
   "author": {
     "name": "Fang-Pen Lin",
     "email": "hello@fangpenlin.com",
@@ -24,5 +21,13 @@
   "bugs": {
     "url": "https://github.com/envoy/loglevel-file-logger/issues"
   },
-  "homepage": "https://github.com/envoy/loglevel-file-logger#readme"
+  "homepage": "https://github.com/envoy/loglevel-file-logger#readme",
+  "devDependencies": {
+    "tslint": "^5.7.0",
+    "tslint-config-standard": "^6.0.1",
+    "typescript": "^2.4.2"
+  },
+  "dependencies": {
+    "loglevel": "^1.4.1"
+  }
 }
