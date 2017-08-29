@@ -1,5 +1,3 @@
-import * as Log from 'loglevel'
-
 /**
  * Setup logger with given writer and formatter
  *
@@ -21,7 +19,7 @@ export default ({
 
   log.methodFactory = (
     methodName: string,
-    level: Log.LogLevel,
+    level: LogLevel,
     loggerName: string
   ) => {
     const originalMethod = originalFactory(methodName, level, loggerName)

@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+"@types/loglevel@^1.4.30":
+  version "1.4.30"
+  resolved "https://registry.yarnpkg.com/@types/loglevel/-/loglevel-1.4.30.tgz#31390d25abc1bdd6fede2f4c50029d2bd3c3ed60"
+
+"@types/react-native-fetch-blob@^0.10.2":
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/@types/react-native-fetch-blob/-/react-native-fetch-blob-0.10.2.tgz#95e85da19132ef4ec3cf72d646cfcd8c33b7f372"
+
 ansi-regex@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-2.1.1.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"

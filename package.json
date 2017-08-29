@@ -11,7 +11,10 @@
     "type": "git",
     "url": "git+https://github.com/envoy/loglevel-file-logger.git"
   },
-  "keywords": ["loglevel", "logging"],
+  "keywords": [
+    "loglevel",
+    "logging"
+  ],
   "author": {
     "name": "Fang-Pen Lin",
     "email": "hello@fangpenlin.com",
@@ -23,6 +26,8 @@
   },
   "homepage": "https://github.com/envoy/loglevel-file-logger#readme",
   "devDependencies": {
+    "@types/loglevel": "^1.4.30",
+    "@types/react-native-fetch-blob": "^0.10.2",
     "tslint": "^5.7.0",
     "tslint-config-standard": "^6.0.1",
     "typescript": "^2.4.2"
