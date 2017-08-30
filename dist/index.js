@@ -1,5 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var FetchBlobWriter_1 = require("./FetchBlobWriter");
+exports.FetchBlobWriter = FetchBlobWriter_1.default;
+var defaultFormatter_1 = require("./defaultFormatter");
+exports.defaultFormatter = defaultFormatter_1.default;
 /**
  * Setup logger with given writer and formatter
  *
