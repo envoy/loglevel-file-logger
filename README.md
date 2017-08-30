@@ -38,14 +38,24 @@ export default class App extends Component {
     this.fileWriter.ensureFile().then(() => {
       // make linter not to complain about promise not subscribed
     })
+    // setup the file logger
     setupLogger({
       log: defaultLogger,
       write: this.fileWriter.write.bind(this.fileWriter)
     })
+    // enable all logger levels
+    defaultLogger.enableAll()
 }
 ```
 
-Please notice that we use `require('loglevel')` to import the global root logger from loglevel, as if you use `import * as Log from 'loglevel'`, somehow it will copy the `export` object and we won't be able to replace the original `methodFactory` of it.
+Please notice that we use `require('loglevel')` to import the global root logger from loglevel, as if you use `import * as Log from 'loglevel'`, somehow it will copy the `export` object and we won't be able to replace the original `methodFactory` of it. Also, you need to call `setupLogger` from `loglevel-file-logger` before calling `enableAll` on the root logger, as `enableAll` replaces logging methods for all logger, you need to setup file logger first otherwise it won't replace method with the one which writes to file.
+
+After the logger setup, you can the logger from loglevel and write as much as log you want
+
+```typescript
+const logger = Log.getLogger('my-logger')
+logger.info('Hello world')
+```
 
 ## FetchBlobWriter
 
