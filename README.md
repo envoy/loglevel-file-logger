@@ -72,9 +72,3 @@ You can define your own by implementing `Formatter` interface and pass it to con
 ```typescript
 this.fileWriter = new FetchBlobWriter('/path/to/my/log', myFormatter)
 ```
-
-### 
-
-```
-
-```
