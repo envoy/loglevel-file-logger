@@ -79,7 +79,7 @@ You can pass an alternative path into constructor. Like this
 this.fileWriter = new FetchBlobWriter('/path/to/my/log')
 ```
 
-The log formatter we use is `defaultFormatter` from
+The default log formatter we use is `defaultFormatter` from
 
 ```typescript
 import { defaultFormatter } from 'loglevel-file-logger'
