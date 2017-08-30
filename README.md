@@ -46,3 +46,35 @@ export default class App extends Component {
 ```
 
 Please notice that we use `require('loglevel')` to import the global root logger from loglevel, as if you use `import * as Log from 'loglevel'`, somehow it will copy the `export` object and we won't be able to replace the original `methodFactory` of it.
+
+## FetchBlobWriter
+
+`FetchBlobWriter` is the only log writer we support now, it relies on [`react-native-fetch-blob`](https://github.com/wkh237/react-native-fetch-blob). By default the log file path is 
+
+```typescript
+RNFetchBlob.fs.dirs.DocumentDir + '/log.txt'
+```
+
+You can pass into constructor to change it. Like this
+
+```typescript
+this.fileWriter = new FetchBlobWriter('/path/to/my/log')
+```
+
+The log formatter we use is `defaultFormatter` from
+
+```typescript
+import { defaultFormatter } from 'loglevel-file-logger'
+```
+
+You can define your own by implementing `Formatter` interface and pass it to constructor as well.
+
+```typescript
+this.fileWriter = new FetchBlobWriter('/path/to/my/log', myFormatter)
+```
+
+### 
+
+```
+
+```
