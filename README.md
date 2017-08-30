@@ -63,7 +63,7 @@ NSString *documentDir = paths[0];
 NSString *logFile = [documentDir stringByAppendingPathComponent:@"log.txt"];
 ```
 
-You can pass into constructor to change it. Like this
+You can pass an alternative path into constructor. Like this
 
 ```typescript
 this.fileWriter = new FetchBlobWriter('/path/to/my/log')
