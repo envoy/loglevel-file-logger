@@ -55,6 +55,14 @@ Please notice that we use `require('loglevel')` to import the global root logger
 RNFetchBlob.fs.dirs.DocumentDir + '/log.txt'
 ```
 
+To get the path in Objective C, you can write
+
+```objective-c
+NSArray<NSString *> *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+NSString *documentDir = paths[0];
+NSString *logFile = [documentDir stringByAppendingPathComponent:@"log.txt"];
+```
+
 You can pass into constructor to change it. Like this
 
 ```typescript
