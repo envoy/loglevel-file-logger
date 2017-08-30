@@ -1,3 +1,7 @@
+export { default as FetchBlobWriter } from './FetchBlobWriter'
+export { default as Formatter } from './Formatter'
+export { default as defaultFormatter } from './defaultFormatter'
+
 /**
  * Setup logger with given writer and formatter
  *
@@ -13,7 +17,7 @@ export default ({
 }: {
   log: Log
   write: (loggerName: string, methodName: string, messages: Array<any>) => void
-  propagateToOriginal: boolean
+  propagateToOriginal?: boolean
 }) => {
   const originalFactory = log.methodFactory
 
