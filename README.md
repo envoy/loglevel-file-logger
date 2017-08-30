@@ -90,3 +90,7 @@ You can define your own by implementing `Formatter` interface and pass it to con
 ```typescript
 this.fileWriter = new FetchBlobWriter('/path/to/my/log', myFormatter)
 ```
+
+## TODO
+
+ - [ ] FetchBlobWriter with file rotation, we can keep say like 7 days of logs
