@@ -16,7 +16,8 @@ exports.default = (loggerName, methodName, objects, now) => {
         else if (object === null) {
             return '[object Null]';
         }
-        else if (Object.prototype.toString.call(object) === '[object Object]') {
+        else if (Object.prototype.toString.call(object) === '[object Object]' ||
+            Array.isArray(object)) {
             return JSON.stringify(object);
         }
         return object.toString();
