@@ -10,5 +10,14 @@ export default (
     `[${methodName.toUpperCase()}]`,
     ...objects
   ]
-  return withDate.map(object => object.toString()).join(' ')
+  return withDate
+    .map(object => {
+      if (object === undefined) {
+        return '[object Undefined]'
+      } else if (object === null) {
+        return '[object Null]'
+      }
+      return object.toString()
+    })
+    .join(' ')
 }
