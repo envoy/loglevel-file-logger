@@ -33,6 +33,17 @@ describe('defaultFormatter', () => {
     ).toEqual('2017-10-05T00:53:48.273Z MyLogger [INFO] 1st msg {"foo":"bar"}')
   })
 
+  it('formats array', () => {
+    expect(
+      defaultFormatter(
+        'MyLogger',
+        'info',
+        ['1st msg', [1, [2, 3], 4]],
+        () => now
+      )
+    ).toEqual('2017-10-05T00:53:48.273Z MyLogger [INFO] 1st msg [1,[2,3],4]')
+  })
+
   it('formats numbers', () => {
     expect(
       defaultFormatter('MyLogger', 'info', ['1st msg', 1234], () => now)
