@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /// Default formatter for formatting log message
-exports.default = (loggerName, methodName, objects) => {
+exports.default = (loggerName, methodName, objects, now) => {
     const withDate = [
-        new Date().toISOString(),
+        now ? now().toISOString() : new Date().toISOString(),
         loggerName,
         `[${methodName.toUpperCase()}]`,
         ...objects
@@ -15,6 +15,9 @@ exports.default = (loggerName, methodName, objects) => {
         }
         else if (object === null) {
             return '[object Null]';
+        }
+        else if (Object.prototype.toString.call(object) === '[object Object]') {
+            return JSON.stringify(object);
         }
         return object.toString();
     })
