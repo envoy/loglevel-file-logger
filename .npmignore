@@ -10,7 +10,7 @@ tsconfig.json
 tslint.json
 typings.json
 typings
-dist/test
+dist/__tests__
 
 .vscode/
 
