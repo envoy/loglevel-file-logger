@@ -2,10 +2,11 @@
 export default (
   loggerName: string,
   methodName: string,
-  objects: Array<any>
+  objects: Array<any>,
+  now?: () => Date
 ) => {
   const withDate = [
-    new Date().toISOString(),
+    now ? now().toISOString() : new Date().toISOString(),
     loggerName,
     `[${methodName.toUpperCase()}]`,
     ...objects
@@ -16,6 +17,8 @@ export default (
         return '[object Undefined]'
       } else if (object === null) {
         return '[object Null]'
+      } else if (Object.prototype.toString.call(object) === '[object Object]') {
+        return JSON.stringify(object)
       }
       return object.toString()
     })
